@@ -1,0 +1,17 @@
+import = [
+    "~/.config/alacritty/themes/themes/carbonfox.toml"
+]
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+opacity = 0.76
+decorations = 'none'
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 12.0
+	
+[cursor]
+[cursor.style]
+    blinking = 'always'

@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Personal/programming -mindepth 1 -type d | fzf)
+    selected=$(fdfind --full-path ~/Personal/programming --min-depth 1 -E {*debug} -E src -E build --type d --no-require-git | fzf)
 fi
 
 if [[ -z $selected ]]; then

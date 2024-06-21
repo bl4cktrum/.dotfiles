@@ -1,0 +1,11 @@
+# General folder and files to ignore
+node_modules/
+*.log
+target/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

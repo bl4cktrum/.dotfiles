@@ -9,4 +9,4 @@
 
 
 
-i3lock --ignore-empty-password --nofork -i /usr/share/backgrounds/lockscreen.png
+i3lock --ignore-empty-password --nofork -i /usr/share/backgrounds/lockscreen_combined.png

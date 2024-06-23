@@ -281,7 +281,7 @@ require("lazy").setup({
 						})
 					end
 
-					if client and client.server_capabilities.inlayHintProvider then
+					if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
 						map("<leader>th", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 						end, "[T]oggle Inlay [H]ints")
@@ -339,6 +339,20 @@ require("lazy").setup({
 							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
 							-- diagnostics = { disable = { 'missing-fields' } },
 						},
+					},
+				},
+				clangd = {
+					cmd = {
+						"clangd",
+						"--background-index",
+						"--fallback-style=webkit",
+						"--clang-tidy",
+						"--suggest-missing-includes",
+						"--header-insertion=iwyu",
+						"--cross-file-rename",
+						"--header-insertion=iwyu",
+						"--header-insertion-decorators",
+						"--offset-encoding=utf-16",
 					},
 				},
 			}
@@ -583,7 +597,6 @@ require("lazy").setup({
 	},
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
-		lazy = true,
 		build = ":TSUpdate",
 		opts = {
 			ensure_installed = {
